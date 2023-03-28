@@ -1,0 +1,28 @@
+
+{
+    "region" : "ap-southeast-1",
+    "profile" : "default",
+    "configuration" : "Release",
+    "image-tag"     : "app:latest",
+    "docker-build-working-dir" : "",
+    "vstoolkit-deployment-mode" : "DeployService",
+    "cluster"                   : "MyWebApp",
+    "launch-type"               : "FARGATE",
+    "launch-subnets"            : "subnet-0dc90562b03efc1d4,subnet-077213c00f6566bdd,subnet-039c7a5f72bf51989",
+    "launch-security-groups"    : "sg-0fe037aba7d9bc61f",
+    "assign-public-ip"          : true,
+    "task-definition-name"      : "webapp1",
+    "task-cpu"                  : "256",
+    "task-memory"               : "512",
+    "platform-version"          : "LATEST",
+    "task-definition-task-role" : "arn:aws:iam::529810685814:role/ecsTaskExecutionRole",
+    "task-execution-role"       : "ecsTaskExecutionRole",
+    "container-name"            : "webapp1",
+    "container-port-mapping"    : "80:80",
+    "container-environment-variables" : "\"ASPNETCORE_ENVIRONMENT\"=\"Production\"",
+    "skip-image-push"                 : false,
+    "cluster-service"                 : "MyWebApp/webapp1",
+    "desired-count"                   : 1,
+    "deployment-minimum-healthy-percent" : 100,
+    "deployment-maximum-percent"         : 200
+}
